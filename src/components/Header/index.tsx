@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
+import { Logo } from "../Logo";
+import { Search } from "../Search";
+import { HeaderWrapper } from "./styles";
 
 export const Header = () => (
-  <header>
+  <HeaderWrapper>
     <nav>
-      <Link to='/'>AutoLuby</Link>
+      <Link to='/'>
+        <Logo />
+      </Link>
+
+      { window.location.pathname === "/" && <Search/> }
+
       <Link to='/'>Sair</Link>
     </nav>
-  </header>
+  </HeaderWrapper>
+
 )
