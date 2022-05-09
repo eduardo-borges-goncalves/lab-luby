@@ -1,2 +1,1 @@
-# lab-luby
-teste técnico
+# Luby Software
