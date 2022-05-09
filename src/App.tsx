@@ -1,10 +1,12 @@
+import { Router } from "./routes";
+import { GlobalStyle } from "./style/global";
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-     início
-    </div>
+    <>
+      <Router/>
+      <GlobalStyle/>
+    </>
   );
 }
 
-export default App;
