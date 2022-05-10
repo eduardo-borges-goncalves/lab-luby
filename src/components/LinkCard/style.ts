@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const LinkCardWrapper = styled.div`
+
   a {
     display: flex;
-
+ 
     background-color: var(--shape);
     box-shadow: 0px 0px 6px rgba(162, 162, 162, 0.25);
 
@@ -14,6 +15,12 @@ export const LinkCardWrapper = styled.div`
     border-radius: 3px;
 
     text-decoration: none;
+    transition: all ease-out 0.3s;
+  
+    :hover {
+      transform: scale(1.02);
+      box-shadow: 0px 0px 30px rgba(162, 162, 162, 0.3);
+    }
 
     #cardInformation {
       display: flex;
