@@ -40,7 +40,7 @@ export const HeaderWrapper = styled.header`
     height: 38px;
     padding: 10px;
     
-    background-color: var(--red);
+    background-color: var(--primary-red);
     border-radius: 3px;
   }
 `
