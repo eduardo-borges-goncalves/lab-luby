@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const SearchWrapper = styled.div`
-  /* border: solid; */
   position: relative;
   display: flex;
   align-items: center;
@@ -9,7 +8,12 @@ export const SearchWrapper = styled.div`
   input {
     height: 44px;
     width: 430px;
+
+    border: 1px solid var(--stroke);
     border-radius: 3px;
+
+    background: var(--input);
+    box-shadow: 0px 0px 6px rgba(162, 162, 162, 0.25);
   }
 
   #search {
@@ -32,13 +36,13 @@ export const SearchWrapper = styled.div`
     }
     
     #icon2 {
-      height: 4.625px;
-      width: 4.625001907348633px;
+      height: 5.625px;
+      width: 5.625001907348633px;
 
       position: absolute;
-      left: 63.38%;
+      left: 62.38%;
       right: 12.5%;
-      top: 63.38%;
+      top: 62.38%;
       bottom: 12.5%;
     }
   }
