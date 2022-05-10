@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderWrapper = styled.header`
   display: flex;
   height: 120px;
-  width: 100%;
+  width: 100%;  
   max-width: 1920px;
   background-color: var(--shape);
   box-shadow: 0px 2px 25px rgba(169, 169, 169, 0.2);
@@ -40,7 +40,7 @@ export const HeaderWrapper = styled.header`
     height: 38px;
     padding: 10px;
     
-    background-color: var(--red);
+    background-color: var(--primary-red);
     border-radius: 3px;
   }
 `
