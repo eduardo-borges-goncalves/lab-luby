@@ -43,12 +43,10 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
 
         font-family: 'Poppins', sans-serif;
-        /* border: solid blue; */
-        height: 100vh;
+        font-style: normal;
     }
 
     button {
         cursor: pointer;
     }
-
 `
