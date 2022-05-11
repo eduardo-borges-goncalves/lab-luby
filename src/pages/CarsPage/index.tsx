@@ -1,5 +1,45 @@
+import { NextBtn } from "../../components/Buttons/NextBtn"
+import { PreviousBtn } from "../../components/Buttons/PreviousBtn"
+import { CardCarsList, CarsContainer, CarsSection, HeaderCarsList } from "./styles"
+
 export const CarsPage = () => {
   return (
-    <div> cars </div>
+    <CarsContainer>
+      <h1>Todos Veículos</h1>
+      <CarsSection>
+        <header>
+          <h2>Listagem geral de veículos</h2>
+          <div className="previousNext">
+            <PreviousBtn>Anterior</PreviousBtn>
+            <span>paginação</span>
+            <NextBtn>Próximo</NextBtn>
+          </div>
+        </header>
+
+        <HeaderCarsList >
+          <span>MARCA</span>
+          <span>MODELO</span>
+          <span>ANO</span>
+          <span>KM</span>
+          <span>COR</span>
+          <span>STATUS</span>
+          <span>CHASSI</span>
+          <span>VALOR</span>
+        </HeaderCarsList>
+
+        <CardCarsList>
+          <span>Marca</span>
+          <span>MODELO</span>
+          <span>ANO</span>
+          <span>KM</span>
+          <span>COR</span>
+          <span>STATUS</span>
+          <span>CHASSI</span>
+          <span>VALOR</span>
+        </CardCarsList>
+      </CarsSection>
+
+    </CarsContainer>
   )
 }
+
