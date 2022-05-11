@@ -44,12 +44,9 @@ export const GlobalStyle = createGlobalStyle`
 
         font-family: 'Poppins', sans-serif;
         font-style: normal;
-        /* border: solid blue; */
-        height: 100vh;
     }
 
     button {
         cursor: pointer;
     }
-
 `

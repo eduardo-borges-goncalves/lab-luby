@@ -1,5 +1,6 @@
 import { NextBtn } from "../../components/Buttons/NextBtn"
 import { PreviousBtn } from "../../components/Buttons/PreviousBtn"
+import { Search } from "../../components/Search"
 import { CardCarsList, CarsContainer, CarsSection, HeaderCarsList } from "./styles"
 
 export const CarsPage = () => {
@@ -13,6 +14,7 @@ export const CarsPage = () => {
             <PreviousBtn>Anterior</PreviousBtn>
             <span>paginação</span>
             <NextBtn>Próximo</NextBtn>
+            <Search style={{width: "206px"}} />
           </div>
         </header>
 

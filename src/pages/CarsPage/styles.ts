@@ -3,15 +3,9 @@ import styled from "styled-components";
 export const CarsContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 45px 7.8% 94px 7.8%;
 
   height: 680px;
-  width: 1620px;
-
-  position: absolute;
-  bottom: 94px;
-  left: 150px;
-  right: 150px;
-  top: 165px;
 
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -23,15 +17,13 @@ export const CarsContainer = styled.div`
     line-height: 45px;
   }
 
-  h1, h2, header {
+  h1, h2, header, .previousNext {
     display: flex;
     align-items: center;
   }
 
   header {
     height: 80px;
-    padding: 0 15px;
-
     justify-content: space-between;
 
     h2 {
@@ -41,18 +33,15 @@ export const CarsContainer = styled.div`
     }
 
     .previousNext {
-      display: flex;
       gap: 5px;
     }
   }
 `
 export const CarsSection = styled.section`
-
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: 100%;
-  padding-bottom: 15px ;
+  padding: 0 15px;
 
   background: var(--shape);
   border: 1px solid var(--stroke);
@@ -67,7 +56,7 @@ export const HeaderCarsList = styled.div`
   align-items: center;
   margin: 0 auto;
   
-  width: 1590px;
+  width: 100%;
   height: 71px;
 
   border-radius: 3px;
