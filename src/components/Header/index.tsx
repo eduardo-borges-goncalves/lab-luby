@@ -1,23 +1,34 @@
+import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
+import { useAuthentication } from "../../context";
 import { Logo } from "../Logo";
 import { Logout } from "../Logout";
 import { Search } from "../Search";
 import { HeaderWrapper } from "./styles";
 
-export const Header = () => (
-  <HeaderWrapper>
-    <nav>
-      <Link to='/'>
-        <Logo />
-      </Link>
+export const Header = () => {
 
-      { window.location.pathname === "/" && <Search/> }
+  const { setIsAuthenticated } = useAuthentication()
 
-      <Link to='/login' id="sair">
-        <span> Sair </span>
-        <Logout />
-      </Link>
-    </nav>
-  </HeaderWrapper>
+  const handleLogout = () => {
+    setIsAuthenticated(false)
+    Cookies.remove("access_token")
+  }
 
-)
+  return (
+    <HeaderWrapper>
+      <nav>
+        <Link to='/'>
+          <Logo />
+        </Link>
+
+        { window.location.pathname === "/" && <Search/> }
+
+        <Link to='/login' id="sair" onClick={handleLogout}>
+          <span> Sair </span>
+          <Logout />
+        </Link>
+      </nav>
+    </HeaderWrapper>
+  )
+}
