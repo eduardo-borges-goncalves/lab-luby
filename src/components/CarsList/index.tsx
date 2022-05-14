@@ -1,4 +1,4 @@
-import { HeaderCarsList, HeaderElement } from "./styles"
+import { HeaderList, HeaderElement } from "./styles"
 import { CardCarsList } from "../CardCarsList"
 
 import { Vehicle } from "../../type/vehicles"
@@ -10,7 +10,7 @@ type CarsListProps = {
 export const CarsList = ({vehicles}:CarsListProps )=> {
   return (
     <>
-      <HeaderCarsList >
+      <HeaderList >
         <HeaderElement>MARCA</HeaderElement>
         <HeaderElement>MODELO</HeaderElement>
         <HeaderElement>ANO</HeaderElement>
@@ -19,7 +19,7 @@ export const CarsList = ({vehicles}:CarsListProps )=> {
         <HeaderElement>STATUS</HeaderElement>
         <HeaderElement style={{ width: "280px"}}>CHASSI</HeaderElement>
         <HeaderElement>VALOR</HeaderElement>
-      </HeaderCarsList>
+      </HeaderList>
     { vehicles.map(vehicle => <CardCarsList {...vehicle}/> ) }
     </>
   )

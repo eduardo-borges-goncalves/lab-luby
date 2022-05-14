@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import { HeaderCarsList, HeaderElement } from "../CarsList/styles";
+import { HeaderList, HeaderElement } from "../CarsList/styles";
 
-export const CardCarsListWrapper = styled(HeaderCarsList)`
+export const CardListWrapper = styled(HeaderList)`
   background-color: transparent;
   border-radius: none;
-
+  height: auto;
+  min-height: 71px;
 `
 
 export const ListElement = styled(HeaderElement)`
@@ -15,9 +16,7 @@ export const ListElement = styled(HeaderElement)`
   line-height: 24px;
   padding: 10px;
 
-  white-space: nowrap; 
-  overflow: hidden; 
-  text-overflow: ellipsis;
+  word-break: break-all;
 `
 
 export const ChassiElement = styled.span`
@@ -31,9 +30,7 @@ export const ChassiElement = styled.span`
   line-height: 24px;
   padding: 10px;
 
-  white-space: nowrap; 
-  overflow: hidden; 
-  text-overflow: ellipsis;
+  word-break: break-all;
 `
 
 export const StatusVendido = styled.span`

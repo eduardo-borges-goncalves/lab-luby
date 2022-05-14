@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeaderCarsList = styled.div`
+export const HeaderList = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -29,9 +29,5 @@ export const HeaderElement = styled.span`
   color: var(--gray);
   padding: 5px;
 
-  white-space: nowrap; 
-  overflow: hidden; 
-  text-overflow: ellipsis;
-
-
+  word-break: break-all;
 `

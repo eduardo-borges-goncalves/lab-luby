@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   margin: 45px 7.8% 94px 7.8%;
 
-  height: 680px;
+  min-height: 680px;
 
   font-weight: 600;
   letter-spacing: -0.02em;

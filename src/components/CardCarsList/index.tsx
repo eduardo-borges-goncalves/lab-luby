@@ -1,6 +1,6 @@
 import { Vehicle } from "../../type/vehicles";
 import { currency } from "../../utils/currency";
-import { CardCarsListWrapper, ChassiElement, ListElement, StatusDisponível, StatusReservado, StatusVendido } from "./style";
+import { CardListWrapper, ChassiElement, ListElement, StatusDisponível, StatusReservado, StatusVendido } from "./style";
 
 export const CardCarsList = ({
   brand, 
@@ -22,7 +22,7 @@ export const CardCarsList = ({
   )
 
   return (
-    <CardCarsListWrapper>
+    <CardListWrapper>
       <ListElement >{brand}</ListElement>
       <ListElement >{model}</ListElement>
       <ListElement >{yer}</ListElement>
@@ -31,6 +31,6 @@ export const CardCarsList = ({
       <ListElement>{renderStatus()}</ListElement>
       <ChassiElement id="chassi"  >{chassi}</ChassiElement>
       <ListElement >{currency(value)}</ListElement>
-    </CardCarsListWrapper>
+    </CardListWrapper>
 )
 }
