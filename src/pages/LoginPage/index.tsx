@@ -1,7 +1,7 @@
 import Cookies from "js-cookie";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuthentication } from "../../context";
+import { useAuthentication } from "../../context/Authentication";
 import apiClient from "../../services/api-client";
 
 type LoginData = {
@@ -24,7 +24,7 @@ export const LoginPage = () => {
     const response = await apiClient.post("/login", {
       "email": loginData.login, "password": loginData.password
     })
-  
+
     const {token} = response.data
     
     if (token) {
@@ -33,7 +33,6 @@ export const LoginPage = () => {
       navigate('/')
     }
   }
-
 
   return (
     <>

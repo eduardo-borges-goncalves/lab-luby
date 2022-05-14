@@ -1,5 +1,5 @@
 import { NavigationHome } from "../../components/NavigationHome"
-import { useAuthentication } from "../../context"
+import { useAuthentication } from "../../context/Authentication"
 import { HomeContainer } from "./styles"
 
 export const HomePage = () => {
