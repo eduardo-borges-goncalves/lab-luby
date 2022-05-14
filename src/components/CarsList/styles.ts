@@ -11,20 +11,27 @@ export const HeaderCarsList = styled.div`
 
   border-radius: 3px;
   background-color: var(--input);
-  
-  span {
-    width: 198.75px;
-    height: 20px;
+`
 
-    font-style: normal;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 20px;
+export const HeaderElement = styled.span`
+  width: 198.75px;
+  height: 20px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
 
-    color: var(--gray);
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--gray);
+  padding: 5px;
+
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+
+
 `
