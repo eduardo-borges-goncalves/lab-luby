@@ -5,6 +5,6 @@ export type Vehicle = {
   km: number, 
   model: string, 
   status: string, 
-  value: string, 
+  value: number, 
   yer: string
 }
