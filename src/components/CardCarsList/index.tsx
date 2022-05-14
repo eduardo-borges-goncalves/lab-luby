@@ -1,14 +1,24 @@
+import { Vehicle } from "../../type/vehicles";
 import { CardCarsListWrapper } from "./style";
 
-export const CardCarsList = () => (
+export const CardCarsList = ({
+  brand, 
+  chassi, 
+  color, 
+  km, 
+  model, 
+  status, 
+  value, 
+  yer
+}:Vehicle) => (
   <CardCarsListWrapper>
-    <span>Marca</span>
-    <span>MODELO</span>
-    <span>ANO</span>
-    <span>KM</span>
-    <span>COR</span>
-    <span>STATUS</span>
-    <span>CHASSI</span>
-    <span>VALOR</span>
+    <span>{brand}</span>
+    <span>{model}</span>
+    <span>{yer}</span>
+    <span>{km}</span>
+    <span>{color}</span>
+    <span>{status}</span>
+    <span>{chassi}</span>
+    <span>{value}</span>
   </CardCarsListWrapper>
 )

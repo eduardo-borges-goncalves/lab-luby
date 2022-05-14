@@ -1,8 +1,13 @@
 import { HeaderCarsList } from "./styles"
 import { CardCarsList } from "../CardCarsList"
 
-export const CarsList = () => {
+import { Vehicle } from "../../type/vehicles"
 
+type CarsListProps = {
+  vehicles: Vehicle[], 
+}
+
+export const CarsList = ({vehicles}:CarsListProps )=> {
   return (
     <>
       <HeaderCarsList >
@@ -15,9 +20,7 @@ export const CarsList = () => {
         <span>CHASSI</span>
         <span>VALOR</span>
       </HeaderCarsList>
-
-      <CardCarsList />
+    { vehicles.map(vehicle => <CardCarsList {...vehicle}/> ) }
     </>
   )
-
 }
