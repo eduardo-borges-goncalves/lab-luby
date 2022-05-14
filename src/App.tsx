@@ -1,23 +1,10 @@
-import { useEffect } from "react";
 import { Router } from "./routes";
 import { GlobalStyle } from "./style/global";
 
-import Cookies from "js-cookie";
-import { useAuthentication } from "./context";
+import { useAuthentication } from "./context/Authentication";
 
 export const App = () => {
-  const { loading, setIsAuthenticated, isAuthenticated, setLoading } = useAuthentication()
-
-  useEffect(() => {
-    const getAuthentication = () => {
-      try {
-        const access_token =  Cookies.get('access_token')
-        access_token && setIsAuthenticated(true)
-      } finally { setLoading(false) }
-    }
-    
-    getAuthentication()
-  }, [])
+  const { loading } = useAuthentication()
 
   return (
     loading ?

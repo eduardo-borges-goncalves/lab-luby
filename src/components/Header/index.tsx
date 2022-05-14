@@ -1,6 +1,6 @@
 import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
-import { useAuthentication } from "../../context";
+import { useAuthentication } from "../../context/Authentication";
 import { Logo } from "../Logo";
 import { Logout } from "../Logout";
 import { Search } from "../Search";
