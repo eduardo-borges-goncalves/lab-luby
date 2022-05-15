@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
    
         --gray: #7C7C7C;
         --dark-gray: #3C3C3C;
+        --light-gray: #A2A2A2;
 
         --primary-red: #F54A48;
         --secondary-red: #DF3938;
@@ -43,9 +44,7 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
 
         font-family: 'Poppins', sans-serif;
-        font-style: normal;
-
-        
+        font-style: normal;  
     }
 
     button {
