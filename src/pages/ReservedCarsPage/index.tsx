@@ -11,7 +11,9 @@ export const ReservedCarsPage = () => {
   return (
     <Container>
       <h1>Seus Veículos</h1>
-      <Section title="Listagem de veículos reservados e vendidos">
+      <Section 
+        list={vehicles}
+        title="Listagem de veículos reservados e vendidos">
         <CarsList vehicles={reservedVehicles} />
       </Section>
     </Container>

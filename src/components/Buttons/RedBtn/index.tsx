@@ -3,11 +3,16 @@ import { RedBtnWrapper } from "./styles";
 
 type Props = {
   children: ReactNode,
-  onClick?: any
+  onClick?: any, 
+  type?: "button" | "submit" | "reset" | undefined, 
+  disabled?: boolean, 
 }
 
-export const RedBtn:FC<Props> = ({children, onClick}:Props) => (
-  <RedBtnWrapper onClick={onClick}>
+export const RedBtn:FC<Props> = ({children, onClick, type, disabled}:Props) => (
+  <RedBtnWrapper 
+    disabled={disabled}
+    type={type}
+    onClick={onClick}>
     {children}
   </RedBtnWrapper>
 )
