@@ -7,11 +7,12 @@ import { HomePage } from "../pages/HomePage";
 import { LoginPage } from "../pages/LoginPage";
 import { NotFoundPage } from "../pages/NotFoundPage";
 import { ReservedCarsPage } from "../pages/ReservedCarsPage";
+import { PrivateRoute } from "./PrivateRoute";
 
 export const Router = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/" element={ <PrivateRoute />}>
         <Route index element={<HomePage />} />
 
         <Route path="/carros" element={
