@@ -20,13 +20,79 @@ export const LoginCard = styled.div`
 
   font-weight: 500;
   font-size: 14px;
-  line-height: 120%;
+
   letter-spacing: -0.03em;
 
   color: var(--gray);
 
-  .input {
+  input {
     margin-bottom: 30px;
+    height: 36px;
+    width: 100%;
+    border-radius: 3px;
+    background: var(--input);   
+    border: 1px solid var(--stroke);
+
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 120%;
+   
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    color: var(--light-gray);
+    
+    ::placeholder {
+      color: var(--light-gray);
+    }
+
+    outline: none;
+    padding: 10px 15px;
+
+    :focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+  }
+
+  .validInput {
+    border: 1.5px solid var(--confirmation);
+  }
+
+  #validIcon {
+    position: absolute;
+    right: 15px;
+    top: 28px; 
+    height: 14px;
+    width: 14px;
+    padding: 2px;
+  
+    border-radius: 50%;
+    background-color: var(--confirmation) ;
+  }
+  
+  .errorInput {
+    border: 1.5px solid #FA982F;
+  }
+
+  #errorIcon {
+    position: absolute;
+    right: 15px;
+    top: 28px; 
+  }
+
+  label {
+    border-radius: nullpx;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    display: flex;
+    flex-direction: column;
+
+    letter-spacing: -0.03em;
+    color: var(--gray);
+    margin-bottom: 6px;
+
+    position: relative;
   }
 
   .title {
@@ -35,11 +101,6 @@ export const LoginCard = styled.div`
     h1 {
       color: var(--dark-gray);
       margin-bottom: 18px;
-      display: flex;
-      flex-wrap: wrap;
-      word-break: break-all;
-      word-wrap: break-word;
-
       font-weight: 600;
       font-size: 38.0001px;
     }
