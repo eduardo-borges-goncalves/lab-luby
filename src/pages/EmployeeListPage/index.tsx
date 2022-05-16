@@ -19,8 +19,6 @@ type Employee = {
 export const EmployeeListPage = () => {
   const [ employees, setEmployees ] = useState<Employee[]>([])
 
-  const { vehicles }= useVehicles()
-
   const getEmployees = async () => {
     const response = await apiClient.get("/employees?noPaginate")
     setEmployees(response.data.employees)
@@ -33,7 +31,9 @@ export const EmployeeListPage = () => {
   return (
     <Container>
       <h1>Funcionários</h1>
-      <Section title="Listagem de funcionários da empresa">
+      <Section 
+        list={employees}
+        title="Listagem de funcionários da empresa">
         <HeaderList>
           <EmployeeHeaderElement>NOME</EmployeeHeaderElement>
           <EmployeeHeaderElement>EMAIL</EmployeeHeaderElement>
