@@ -5,11 +5,12 @@ import { ArrowLeft } from "../../ArrowLeft";
 type Props = {
   children?: ReactNode,
   onClick?: () => void, 
+  disabled: boolean
 }
 
 
-export const NextBtn:FC<Props> = ({children, onClick}) => (
-  <NextBtnWrapper onClick={onClick} >
+export const NextBtn:FC<Props> = ({children, onClick,   disabled}) => (
+  <NextBtnWrapper   disabled={disabled} onClick={onClick} >
     {children}
     <ArrowLeft style={{ transform: "rotate(180deg)" }} />
   </NextBtnWrapper>

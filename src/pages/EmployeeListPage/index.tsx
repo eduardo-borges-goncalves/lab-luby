@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react"
 import { CardListWrapper } from "../../components/CardCarsList/style"
-import { HeaderElement, HeaderList } from "../../components/CarsList/styles"
+import { HeaderList } from "../../components/CarsList/styles"
 import { Container } from "../../components/Containers/styles"
 import { Section } from "../../components/Section"
-import { useVehicles } from "../../context/Vehicles"
 import apiClient from "../../services/api-client"
 import { currency } from "../../utils/currency"
 import { EmployeeListElement, EmployeeHeaderElement} from "./style"
@@ -17,22 +16,34 @@ type Employee = {
 }
 
 export const EmployeeListPage = () => {
-  const [ employees, setEmployees ] = useState<Employee[]>([])
-
+  const [currentPage, setCurrentPage] = useState(1)
+  const [employees, setEmployees] = useState<Employee[]>([])
+  const [currentData, setCurrentData] = useState<Employee[]>([])
+  const pageSize = 7
+  
   const getEmployees = async () => {
     const response = await apiClient.get("/employees?noPaginate")
     setEmployees(response.data.employees)
   }
 
-  useEffect( () => {
-    getEmployees()
-  }, [])
+  const updateCurrentData = (data:Employee[]) => {
+    const firstPageIndex = (currentPage - 1) * pageSize
+    const lastPageIndex = firstPageIndex + pageSize
+
+    setCurrentData(data.slice(firstPageIndex, lastPageIndex))
+  }
+
+  useEffect(() => updateCurrentData(employees), [currentPage, employees])
+  useEffect( () => {employees.length === 0 && getEmployees()}, [])
 
   return (
     <Container>
       <h1>Funcionários</h1>
       <Section 
-        list={employees}
+        pageSize={pageSize}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        data={employees}
         title="Listagem de funcionários da empresa">
         <HeaderList>
           <EmployeeHeaderElement>NOME</EmployeeHeaderElement>
@@ -42,7 +53,7 @@ export const EmployeeListPage = () => {
           <EmployeeHeaderElement style={{width: "400px"}}>BIO</EmployeeHeaderElement>
         </HeaderList>
         {
-          employees && employees.map(employee => (
+          currentData.map(employee => (
             <>
             <CardListWrapper>
               <EmployeeListElement>{employee.name}</EmployeeListElement>

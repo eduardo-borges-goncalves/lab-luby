@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { Navigate } from "react-router-dom";
 import { Layout } from "../../components/Layout";
 import { useAuthentication } from "../../context/Authentication";
