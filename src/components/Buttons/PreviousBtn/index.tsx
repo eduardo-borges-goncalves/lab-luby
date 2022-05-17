@@ -5,11 +5,12 @@ import { ArrowLeft } from "../../ArrowLeft";
 
 type Props = {
   children?: ReactNode,
-  onClick?: () => void, 
+  onClick?: () => void,
+  disabled: boolean 
 }
 
-export const PreviousBtn:FC<Props> = ({children, onClick}) => (
-  <PreviousBtnWrapper onClick={onClick}>
+export const PreviousBtn:FC<Props> = ({children, onClick, disabled}) => (
+  <PreviousBtnWrapper   disabled={disabled} onClick={onClick}>
     <ArrowLeft/>
     {children}
   </PreviousBtnWrapper>
